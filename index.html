@@ -1,0 +1,95 @@
+
+<!-- Define o tipo de documento e o idioma da página -->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon/lista.png">
+    <title>Minhas Tarefas!</title>
+
+
+    <!-- Importação de ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Estilo Desktop -->
+    <link rel="stylesheet" href="assets/css/estilo.css">
+
+    <!-- Estilo Celulares -->
+    <link rel="stylesheet" href="assets/css/mobile.css" media="screen and (max-width: 768px)">
+</head>
+
+<body>
+
+    <!-- Barra de navegação: contém a logo e os controles de filtragem -->
+    <nav class="navbar">
+        <div class="nav-conteudo">
+            <div class="logo">
+                <img src="assets/img/icone.png" alt="Logo" id="logo-img">
+                <span>Minhas Tarefas!</span>
+            </div>
+            
+            <!-- Seção de Filtros: permite ao usuário filtrar tarefas por prioridade e status -->
+            <div class="container-filtros">
+                <img src="assets/img/filtro.png" alt="Ícone de Filtro" class="filtro-img">
+                
+                <select id="prioridade-filtro">
+                    <option value="Todas">Todas Prioridades</option>
+                    <option value="Alta">Alta</option>
+                    <option value="Média">Média</option>
+                    <option value="Baixa">Baixa</option>
+                </select>
+
+                <select id="status-filtro">
+                    <option value="Todos">Todos Status</option>
+                    <option value="Pendente">Pendentes</option>
+                    <option value="Concluída">Concluídas</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+<main class="conteudo-principal">
+
+    <!-- Formulário de Cadastro: Onde o usuário insere os dados da nova tarefa -->
+    <section class="cartao-formulario">
+        <form id="formulario-tarefa">
+            <div class="linha-formulario">
+                <div class="grupo-entrada">
+                    <input type="text" id="titulo-tarefa" placeholder="Título da tarefa..." required>
+                    <div class="sub-linha">
+                        <select id="prioridade-tarefa">
+                            <option value="Baixa">Baixa Prioridade</option>
+                            <option value="Média">Média Prioridade</option>
+                            <option value="Alta">Alta Prioridade</option>
+                        </select>
+                        <button type="submit" id="btn-adicionar">Adicionar</button>
+                    </div>
+                </div>
+                <textarea id="descricao-tarefa" placeholder="Descreva os detalhes da tarefa..." required></textarea>
+            </div>
+        </form>
+
+        <!-- Input para armazenar o ID da tarefa durante a edição -->
+        <input type="hidden" id="tarefa-id-edicao" value="">
+    </section>
+
+    <hr class="divisor">
+
+    <!-- Local onde o JavaScript salvara as tarefas -->
+    <div id="lista-tarefas"></div>
+</main>
+
+    <!-- Rodapé pagina -->
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+            <p>&copy; 2026 - Ricardo Zan | <strong>RU: 5164357</strong></p>
+            <p>Trabalho de Programação Web - Análise e Desenvolvimento de Sistemas - Uninter</p>
+        </div>
+    </footer>
+
+    <!-- Chamada do arquivo JS -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

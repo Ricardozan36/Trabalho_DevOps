@@ -1,0 +1,278 @@
+
+/* Estilo Global */
+* { 
+    margin: 0px; 
+    padding: 0px; 
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+body { 
+    background-color: #f0f2f5; 
+    color: #333; 
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 1000px;
+}
+
+/* Barra de Navegação e Filtros */
+.navbar {
+    background-color: #3b71ca;
+    padding: 11px 32px;
+    position: fixed; 
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-conteudo {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px;
+    margin: 0px auto;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#logo-img {
+    height: 38px;
+    width: auto;
+    border-radius: 6px;
+}
+
+.container-filtros {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filtro-img {
+    height: 32px;
+}
+
+.container-filtros select {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+    color: #444;
+    transition: background-color 0.3s;
+}
+
+.container-filtros select:hover {
+    background-color: #e9ecef;
+}
+
+/* Conteúdo Principal e Formulário */
+.conteudo-principal { 
+    margin-top: 100px; 
+    padding: 20px; 
+    max-width: 1200px; 
+    width: 1140px;
+    margin-left: auto; 
+    margin-right: auto; 
+    flex: 1; 
+}
+
+.cartao-formulario {
+    background: white;
+    padding: 30px; 
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.linha-formulario { 
+    display: flex; 
+    gap: 30px; 
+}
+
+.grupo-entrada { 
+    flex: 1; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+.sub-linha { 
+    display: flex; 
+    gap: 10px; 
+}
+
+textarea { 
+    flex: 1.5; 
+    height: 110px; 
+    resize: none; 
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input, .cartao-formulario select { 
+    padding: 12px; 
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    width: 100%;
+}
+
+#btn-adicionar {
+    background: #3b71ca;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+#btn-adicionar:hover { 
+    background: #2a5298; 
+}
+
+.divisor { 
+    border: 0px; 
+    border-top: 1px solid #dee2e6; 
+    margin: 25px 0px; 
+}
+
+/* Itens da Lista de Tarefas */
+.item-tarefa {
+    background: white;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 20px 40px; 
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.04);
+    border-left: 8px solid #ccc; 
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 100%;
+}
+
+.item-tarefa:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.08);
+}
+
+.item-tarefa.Alta { border-left-color: #dc3545; }
+.item-tarefa.Média { border-left-color: #ffc107; }
+.item-tarefa.Baixa { border-left-color: #198754; }
+
+.info-tarefa { 
+    flex: 2; 
+    min-width: 0px; 
+}
+
+.info-tarefa h3 { 
+    font-size: 19px;
+    margin-bottom: 5px; 
+    color: #222; 
+    overflow-wrap: anywhere; 
+    word-break: break-word;
+}
+
+.info-tarefa p { 
+    font-size: 16px;
+    color: #555; 
+    overflow-wrap: anywhere; 
+    word-break: break-word;
+    white-space: pre-wrap; 
+}
+
+.meta-tarefa { 
+    flex: 1; 
+    text-align: right; 
+    font-size: 14px;
+    color: #777; 
+    margin-right: 30px; 
+}
+
+/* Ações e Status Concluído */
+.acoes { 
+    display: flex; 
+    gap: 15px; 
+}
+
+.btn-acao {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 25px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.btn-acao:hover { 
+    transform: scale(1.2); 
+}
+
+.btn-concluir { color: #198754; }
+.btn-excluir { color: #dc3545; }
+
+.concluida { 
+    opacity: 0.6; 
+    background-color: #f8f9fa; 
+}
+
+.concluida h3 { 
+    text-decoration: line-through; 
+    color: #888; 
+}
+
+/* Rodapé */
+.rodape {
+    background-color: #3b71ca;
+    color: white;
+    padding: 20px 0px;
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px -2px 10px rgba(0,0,0,0.1);
+}
+
+.rodape-conteudo p {
+    font-size: 14px;
+    margin: 5px 0px;
+}
+
+.rodape-conteudo strong {
+    color: #f8f8f7;
+}
+
+.btn-editar:hover { 
+    color: #2a5298 !important; 
+}
+
+/* Animações */
+.removendo {
+    transform: scale(0.9);
+    opacity: 0;
+    transition: all 0.4s ease;
+    pointer-events: none; 
+}
+
+@keyframes entradaSuave {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0px); }
+}
+
+.item-tarefa {
+    animation: entradaSuave 0.4s ease-out;
+}

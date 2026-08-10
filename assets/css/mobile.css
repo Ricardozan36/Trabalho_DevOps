@@ -1,0 +1,97 @@
+
+/* Ajuste para diferentes tamanhos de tela */
+.linha-formulario { flex-direction: column; }
+@media (max-width: 380px) {
+    .logo { font-size: 16px; }
+    .btn-acao { font-size: 24px; }
+}
+
+
+/* Ajuste da Barra de Navegação */
+.nav-conteudo {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0px;
+}
+
+.navbar {
+    padding: 10px 15px;
+    position: relative;
+}
+
+.container-filtros {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.container-filtros select {
+    flex: 1;
+    min-width: 140px;
+}
+
+/* Ajuste do Conteúdo Principal */
+.conteudo-principal {
+    margin-top: 20px;
+    width: 98%;
+    padding: 10px;
+}
+
+/* Ajuste do Formulário */
+.linha-formulario {
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cartao-formulario {
+    padding: 20px;
+}
+
+.sub-linha {
+    flex-direction: column;
+    width: 100%;
+}
+
+#btn-adicionar {
+    width: 100%;
+    padding: 15px;
+}
+
+/* Ajuste posição das tarefas salvas */
+.item-tarefa {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+    gap: 15px;
+}
+
+.info-tarefa {
+    width: 100%;
+}
+
+.meta-tarefa {
+    text-align: left;
+    margin-right: 0px;
+    padding: 10px 0px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+}
+
+/* Ajuste dos botões) */
+.acoes {
+    width: 100%;
+    justify-content: space-around;
+    padding-top: 5px;
+}
+
+.btn-acao {
+    font-size: 30px;
+    padding: 10px;
+}
+
+/* Rodapé */
+.rodape {
+    padding: 30px 15px;
+}
