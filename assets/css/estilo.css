@@ -1,4 +1,7 @@
-* { 
+* 
+/* Arquivo principal de estilizacao do layout da Lista de Tarefas */
+
+{ 
     margin: 0px; 
     padding: 0px; 
     box-sizing: border-box;
