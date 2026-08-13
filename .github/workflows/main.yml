@@ -1,0 +1,21 @@
+name: CI - Lista de Tarefas
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 1. Baixar o código do repositório
+      uses: actions/checkout@v3
+
+    - name: 2. Testar Build do Container Docker
+      run: docker build -t lista-tarefas-app .
+      
+    - name: 3. Validação Final
+      run: echo "Integração Contínua finalizada com sucesso! O ambiente está integro."
